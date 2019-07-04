@@ -12,7 +12,7 @@ module.exports = {
 
         // envia informação em tempo real através do io com todos os dados do post
         // para o frontend conseguir acessar a mensagem em tempo real
-        req.io('like', post)
+        req.io.emit('like', post)
 
         return res.json(post)
     }
